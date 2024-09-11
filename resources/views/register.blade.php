@@ -2,17 +2,88 @@
 <html>
 <head>
     <title>Register</title>
-    <!-- Incluir el CSS de Bootstrap 5 desde el CDN (Cosmo theme de Bootswatch) -->
+    <!-- Incluir el CSS de Bootstrap 5 desde el CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/cosmo/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    
+    <style>
+        /* Estilos para el fondo */
+        body {
+            background-image: url('https://i.gifer.com/IrF.gif'); /* GIF de galaxia y lluvia */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            backdrop-filter: blur(5px); /* Desenfoque para dar un efecto de profundidad */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+        /* Estilos para la tarjeta */
+        .card {
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
+            backdrop-filter: blur(15px); /* Desenfoque interno */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra más fuerte */
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2); /* Borde transparente */
+        }
+        /* Encabezado de la tarjeta */
+        .card-header {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degradado galaxia */
+            text-align: center;
+            padding: 1.5rem;
+        }
+        /* Título estilizado */
+        h3 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        /* Estilo para el botón */
+        .btn {
+            background: linear-gradient(135deg, #ff5f6d, #ffc371); /* Degradado en el botón */
+            border: none;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(255, 95, 109, 0.6);
+        }
+        .btn:hover {
+            transform: translateY(-3px); /* Efecto de desplazamiento */
+            box-shadow: 0 6px 25px rgba(255, 95, 109, 0.8);
+        }
+        /* Bordes redondeados en inputs */
+        input {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        /* Texto y etiquetas en blanco */
+        label, .form-control {
+            color: white;
+        }
+        /* Cambiar color de inputs al interactuar */
+        input:focus {
+            border-color: #ff5f6d;
+            box-shadow: 0 0 8px rgba(255, 95, 109, 0.8);
+        }
+        /* Efecto visual para la tarjeta */
+        .card-body {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
+                <div class="card shadow-lg">
+                    <div class="card-header text-white">
                         <h3 class="mb-0">Register</h3>
                     </div>
                     <div class="card-body">
@@ -43,7 +114,7 @@
                                 <label for="password_confirmation" class="form-label">Confirm Password</label>
                                 <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" required>
                             </div>
-                            <button type="submit" class="btn btn-success w-100">Register</button>
+                            <button type="submit" class="btn btn-block text-white w-100">Register</button>
                         </form>
                     </div>
                 </div>
