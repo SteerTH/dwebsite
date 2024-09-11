@@ -5,14 +5,11 @@ namespace App\Http\Controllers\registro;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class registrosctr extends Controller
+class registroCtrl extends Controller
 {
-    //
     public function vistaregistrar(){
 
-        return view('register');
-
-
+        return view('registro/frmRegistro');
 
     }
 }

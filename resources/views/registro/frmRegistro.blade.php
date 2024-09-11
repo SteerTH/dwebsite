@@ -8,7 +8,7 @@
     <style>
         /* Estilos para el fondo */
         body {
-            background-image: url('https://i.gifer.com/IrF.gif'); /* GIF de galaxia y lluvia */
+            background-color: gainsboro;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -87,7 +87,10 @@
                         <h3 class="mb-0">Register</h3>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="
+                        
+                        
+                        ">
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="name" class="form-label">Name</label>

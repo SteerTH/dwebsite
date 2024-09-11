@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\registro\registroCtrl;
+use App\Http\Controllers\login\loginCtrl;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\registro\registrosctr;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("registrar",[registrosctr::class,"vistaregistrar"]);
+Route::get("/registro",[registroCtrl::class,"vistaregistrar"]);
+Route::get("/login",[loginCtrl::class,"vistalogin"]);
